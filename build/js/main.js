@@ -37,6 +37,13 @@ $(function() {
 
     });
 
+    $('#search').autocomplete({
+        minChars: 2,
+        maxHeight: 410,
+        lookupLimit: 13,
+        lookup: contractors
+    });
+
     $('.style-tab').click(function() {
         $('.style-tabs').find('.active').removeClass('active');
         $(this).addClass('active');

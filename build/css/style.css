@@ -308,7 +308,7 @@ select {
 .decor2 {
   position: absolute;
   right: 0;
-  top: 63.2%;
+  top: 59.8%;
   max-width: 457px; }
 
 .content-box__top-line .container {
@@ -849,6 +849,39 @@ select {
 
 .table-wrap {
   padding: 5px 0 130px 0; }
+
+.autocomplete-suggestions {
+  background: #fff;
+  font-size: 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 15px 0;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 100%;
+  color: #424552; }
+
+.autocomplete-suggestion {
+  display: block;
+  margin-bottom: 15px;
+  line-height: 30px;
+  padding: 0 20px;
+  cursor: pointer; }
+  .autocomplete-suggestion strong {
+    color: #2E5BFF;
+    font-weight: normal; }
+
+.autocomplete-suggestion:hover {
+  background: #2E5BFF;
+  color: #fff; }
+
+.autocomplete-suggestion:hover strong {
+  color: #fff; }
 
 /* I E   S T Y L E S */
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {

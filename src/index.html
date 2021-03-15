@@ -5,7 +5,7 @@
 
 <body>
     <div class="wrapper">
-        @@include('components/page/_2_header.html')
+        @@include('components/page/_2_header.html',{'class':'active'})
         <div class="content-box">
             <img class="decor1" src="img/decor1.png" alt="">
             <img class="decor2" src="img/decor2.png" alt="">
@@ -14,7 +14,7 @@
                     <h1>Контрагенты</h1>
                     <div class="filters">
                         <div class="search">
-                            <input type="search" placeholder="Поиск">
+                            <input type="search" id="search" placeholder="Поиск">
                         </div>
                         <div class="select-box">
                             <span>Статус:</span>
