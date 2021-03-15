@@ -1,27 +1,4 @@
-Number.isNaN = Number.isNaN || function(value) {
-    return typeof value === 'number' && isNaN(value);
-}
-
 $(function() {
-
-    $(window).scroll(function() {
-        if ($(window).width() > '991') {
-            if ($(this).scrollTop() > 90) {
-                $('.header').addClass('fixed');
-                $('body').css('padding-top', '90px');
-            } else if ($(this).scrollTop() < 90) {
-                $('.header').removeClass('fixed');
-                $('body').css('padding-top', '0');
-            }
-        }
-    });
-
-    jQuery("a.scrollto").click(function() {
-        elementClick = jQuery(this).attr("href")
-        destination = jQuery(elementClick).offset().top;
-        jQuery("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination }, 700);
-        return false;
-    });
 
     $('#hamburger-icon').click(function() {
         $(this).toggleClass('active');
@@ -34,10 +11,30 @@ $(function() {
         }
     });
 
-    $('.mobile-menu .top-menu a').click(function() {
-        $('#hamburger-icon').removeClass('active');
-        $('.mobile-menu').removeClass('active');
-        $('html').removeClass('ov-hidden');
+    $('select').niceSelect();
+
+    $('.profile').click(function(i) {
+        $(this).addClass('active');
+        var profileHide = $('.profile-hide');
+
+        if (profileHide.css('display') != 'block') {
+            profileHide.show(300);
+
+
+            var firstClick = true;
+            $(document).bind('click.Profile', function(i) {
+                if (!firstClick && $(i.target).closest('.profile-hide').length == 0) {
+                    profileHide.hide(300);
+                    $('.profile').removeClass('active');
+                    $(document).unbind('click.Profile');
+                }
+
+                firstClick = false;
+            });
+        }
+
+        i.preventDefault();
+
     });
 
     $('.style-tab').click(function() {
