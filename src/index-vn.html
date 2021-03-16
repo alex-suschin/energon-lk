@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('components/page/_1_head.html',{ 'title': 'Энергон', 'description': 'Описание', 'keywords': 'Ключевые слова', 'favicon': 'img/favicon/favicon.png' })
+
+<body>
+    <div class="wrapper wrapper-vn">
+        @@include('components/page/_2_header.html',{'class':'active'})
+        <div class="content-box">
+            <img class="decor1" src="img/decor1.png" alt="">
+            <img class="decor2" src="img/decor2.png" alt="">
+            <div class="content-box__back-line">
+                <div class="container">
+                    <a href="#" class="back">Назад</a>
+                </div>
+            </div>
+
+            <div class="content-box__info-item">
+                <div class="container">
+                    <div class="info-item-top">
+                        <div class="info-item-top__left">
+                            <div class="info-item-title">
+                                <b>ООО MEGAVATT</b>
+                                <select name="status-select" id="status-select">
+                                    <option selected disabled value="Статус">Статус</option>
+                                    <option value="Проработка">Проработка</option>
+                                    <option value="В работе">В работе</option>
+                                    <option value="В ожидании">В ожидании</option>
+                                </select>
+                                <span class="in-work2">Проработка</span>
+                                <div class="btn-more-box">
+                                    <a class="btn-more" href="javascrirpt:void(0)">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </a>
+                                    <div class="btn-el-items">
+                                        <a href="#" class="btn-el btn-del"></a>
+                                        <a href="#" class="btn-el btn-edit"></a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="info-item-content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                                    laborum.
+                                </p>
+                            </div>
+                            <div class="info-item-address">
+                                <div>
+                                    <span>ИНН</span>
+                                    <b>4826125480</b>
+                                </div>
+                                <div>
+                                    <span>Город</span>
+                                    <b>Новомосковск</b>
+                                </div>
+                                <div>
+                                    <span>Адрес</span>
+                                    <b>301650, Тульская область, ул. Калинина, д. 15</b>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-item-top__right">
+                            <div class="item-info">
+                                <span>Тип клиента</span>
+                                <b>Монтажная организация</b>
+                            </div>
+                            <div class="item-info">
+                                <span>Тип закупки</span>
+                                <b>Внутренняя закупка</b>
+                            </div>
+                            <div class="item-info">
+                                <span>Статус клиента</span>
+                                <b>Действующий – постоянный</b>
+                            </div>
+                            <div class="item-info">
+                                <span>Ответственный менеджер </span>
+                                <b>John Doe</b>
+                            </div>
+                            <div class="btn-more-box">
+                                <a class="btn-more" href="javascrirpt:void(0)">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </a>
+                                <div class="btn-el-items">
+                                    <a href="#" class="btn-el btn-del"></a>
+                                    <a href="#" class="btn-el btn-edit"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+
+        @@include('components/page/_3_footer.html')
+    </div>
+
+    @@include('components/page/_4_scripts.html')
+</body>
+
+</html>

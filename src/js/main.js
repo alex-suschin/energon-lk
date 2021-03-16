@@ -51,6 +51,29 @@ $(function() {
         $('#' + $(this).data('switch')).show();
     });
 
+    $('.btn-more').click(function(e) {
+        $(this).addClass('active');
+        var btnItems = $(this).siblings('.btn-el-items');
+
+        if (btnItems.css('opacity') != '1') {
+            btnItems.css('opacity', '1');
+
+
+            var firstClickBtns = true;
+            $(document).bind('click.btns', function(e) {
+                if (!firstClickBtns && $(e.target).closest('.btn-el-items').length == 0) {
+                    btnItems.css('opacity', '0');
+                    $('.btn-more').removeClass('active');
+                    $(document).unbind('click.btns');
+                }
+
+                firstClickBtns = false;
+            });
+        }
+
+        e.preventDefault();
+    });
+
 
 });
 
