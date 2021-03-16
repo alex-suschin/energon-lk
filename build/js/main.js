@@ -44,10 +44,10 @@ $(function() {
         lookup: contractors
     });
 
-    $('.style-tab').click(function() {
-        $('.style-tabs').find('.active').removeClass('active');
+    $('.btn-switch').click(function() {
+        $('.elem-information__btns').find('.active').removeClass('active');
         $(this).addClass('active');
-        $('.styles-elems').find('.styles-elem-item').hide();
+        $('.elem-information__box').find('.elem-item').hide();
         $('#' + $(this).data('switch')).show();
     });
 
