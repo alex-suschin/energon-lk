@@ -157,35 +157,56 @@
                     </div>
                     <div class="elem-information__box">
                         <div class="elem-item" id="tab_1" style="display: none;">
-                            <div class="events-items">
-                                <div class="events-item task">
-                                    <div class="events-item-date">Сегодня, 14:37</div>
-                                    <div class="events-item-title">Поставлена задача: Перезвонить клиенту 12.08.2017</div>
-                                    <div class="events-item-info">
-                                        <div class="events-item-info-status">Заказ</div>
-                                        <div class="events-item-info-note">
-                                            <b>2 дня назад</b>
-                                            <span>Счет #95762 оплатили, перезвонить через неделю по поводу доставки</span>
+                            <div class="events-box">
+                                <div class="events-items">
+                                    <div class="events-item task">
+                                        <div class="events-item-date">Сегодня, 14:37</div>
+                                        <div class="events-item-title">Поставлена задача: Перезвонить клиенту 12.08.2017</div>
+                                        <div class="events-item-info">
+                                            <div class="events-item-info-status">Заказ</div>
+                                            <div class="events-item-info-note">
+                                                <b>2 дня назад</b>
+                                                <span>Счет #95762 оплатили, перезвонить через неделю по поводу доставки</span>
+                                            </div>
+                                            <div class="events-item-info-person">
+                                                <b>Контактное лицо</b>
+                                                <span>Резник Евгений Александрович</span>
+                                            </div>
                                         </div>
-                                        <div class="events-item-info-person">
-                                            <b>Контактное лицо</b>
-                                            <span>Резник Евгений Александрович</span>
+                                    </div>
+
+                                    <div class="events-item request">
+                                        <div class="events-item-date">Сегодня, 14:37</div>
+                                        <div class="events-item-title">Заявка: Перезвонить клиенту 12.08.2017</div>
+                                        <div class="events-item-info">
+                                            <div class="events-item-info-status">Заявка</div>
+                                            <div class="events-item-info-note">
+                                                <b>2 дня назад</b>
+                                                <span>Отправил счет на заказ #95762</span>
+                                            </div>
+                                            <div class="events-item-info-person">
+                                                <b>Контактное лицо</b>
+                                                <span>Резник Евгений Александрович</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="events-item request">
-                                    <div class="events-item-date">Сегодня, 14:37</div>
-                                    <div class="events-item-title">Заявка: Перезвонить клиенту 12.08.2017</div>
-                                    <div class="events-item-info">
-                                        <div class="events-item-info-status">Заявка</div>
-                                        <div class="events-item-info-note">
-                                            <b>2 дня назад</b>
-                                            <span>Отправил счет на заказ #95762</span>
+                                <div class="events-dates">
+                                    <div class="select-box">
+                                        <span>Категория:</span>
+                                        <select name="" id="">
+                                            <option value="В работе">В работе</option>
+                                            <option value="В ожидании">В ожидании</option>
+                                            <option value="Удалена">Удалена</option>
+                                        </select>
+                                    </div>
+                                    <div class="date-range">
+                                        <div class="date-range-item">
+                                            <input placeholder="С" class="start_one" data-multiple-dates-separator=" - " type="text" class="date" id="datepicker">
                                         </div>
-                                        <div class="events-item-info-person">
-                                            <b>Контактное лицо</b>
-                                            <span>Резник Евгений Александрович</span>
+                                        <div class="date-range-item">
+                                            <input placeholder="По" type="text" class="date end_one">
                                         </div>
                                     </div>
                                 </div>
