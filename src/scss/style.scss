@@ -768,6 +768,7 @@ select {
         margin-bottom: 30px;
     }
     a {
+        white-space: nowrap;
         font-weight: 500;
         font-size: 14px;
         line-height: 100%;
@@ -1641,6 +1642,22 @@ select {
     }
 }
 
+.table-tr-btn {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #2E5BFF;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-image: url(../img/small-blue-arr.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    @include transition02;
+}
+
 
 /* I E   S T Y L E S */
 
@@ -1669,6 +1686,18 @@ select {
     M O B I L E
 */
 
+@media screen and (max-width: 1560px) {
+    .table-td {
+        padding-right: 10px;
+    }
+    .table-td span {
+        font-size: 12px;
+    }
+    .table-th {
+        font-size: 10px;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     html,
     body {
@@ -1679,9 +1708,152 @@ select {
     a:focus {
         outline: none;
     }
+    .filters {
+        width: 60%;
+    }
 }
 
-@media screen and (max-width: 1199px) {}
+@media screen and (max-width: 1040px) {
+    .table-tr *.table-td {
+        width: auto;
+    }
+    .table-td span,
+    .table-td a {
+        font-size: 10px;
+    }
+    .logo,
+    .btn-abc {
+        flex-shrink: 0;
+    }
+    .table-th {
+        text-transform: capitalize;
+    }
+    .table-td:first-child {
+        padding-left: 20px;
+    }
+    .table-td:last-child {
+        padding-right: 20px;
+    }
+    .menu li {
+        margin-right: 50px;
+    }
+    .logo {
+        margin-right: 45px;
+    }
+    .menu a {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .table-tr.active .table-tr-btn {
+        background-color: #2E5BFF;
+        background-image: url(../img/small-white-arr.svg);
+    }
+    .table-tr .table-td {
+        display: none;
+        border-radius: 0;
+        border-bottom: 1px solid #F3F3F3;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+        padding: 14px 0 4px 0;
+    }
+    .table-tr .table-td:first-child {
+        display: block;
+    }
+    .table-tr .table-td:last-child {
+        display: block;
+    }
+    .table-tr:first-child {
+        display: none;
+    }
+    .table-tr {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 4px 15px 0 15px;
+    }
+    .table-tr-btn {
+        display: block;
+    }
+    .table-tr.active .table-td {
+        display: block;
+    }
+    .table-td a {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 120%;
+        color: #424552;
+    }
+    .table-td a:not(.table-tr-btn, .in-work2, .in-work, .del, .wait) {
+        display: block;
+        width: fit-content;
+    }
+    .table-td span {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 120%;
+        color: #424552;
+        margin-bottom: 10px;
+    }
+    .in-work2,
+    .in-work,
+    .del,
+    .wait {
+        margin-bottom: 10px;
+    }
+    .table-tr .table-td:last-child {
+        border: none;
+        display: flex;
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .filters {
+        width: 100%;
+    }
+    .header {
+        opacity: 0;
+        padding: 12px 0 0 0;
+        box-sizing: border-box;
+        height: 114px;
+        @include transition02;
+    }
+    .header.load {
+        opacity: 1;
+    }
+    .menu {
+        padding: 18px 0;
+        justify-content: center;
+        background: #fff;
+    }
+    .menu a:after {
+        bottom: -21px;
+    }
+    .header-box {
+        padding: 0 16px;
+        padding-bottom: 14px;
+        border-bottom: 1px solid #E1E1E1;
+    }
+    .content-box__top-line .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .content-box__top-line h1 {
+        margin-bottom: 18px;
+    }
+    .filters {
+        flex-direction: row-reverse;
+    }
+    .decor1,
+    .decor2 {
+        display: none;
+    }
+}
 
 @media screen and (max-width: 991px) {}
 

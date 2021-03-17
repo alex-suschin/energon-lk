@@ -89,6 +89,10 @@ $(function() {
         $('.start_one').trigger('focus');
     });
 
+    $('.table-tr-btn').click(function() {
+        $(this).closest('.table-tr').toggleClass('active');
+    });
+
 });
 
 $(window).on('load resize scroll', function() {
@@ -99,12 +103,13 @@ $(window).on('load resize scroll', function() {
 
     }
 
-    if (width > '700') {
-
+    if (width < '801') {
+        $('.menu').insertAfter($('.header-box'));
+        $('.header').addClass('load');
     }
 
-    if (width < '700') {
-
+    if (width > '800') {
+        $('.menu').insertAfter($('.logo'));
     }
 
 });
