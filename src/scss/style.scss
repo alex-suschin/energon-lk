@@ -1443,6 +1443,116 @@ select {
     }
 }
 
+.events-items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.events-item {
+    max-width: 590px;
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.events-item-date {
+    position: relative;
+    padding: 0 0 0 14px;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 100%;
+    color: #96979B;
+    margin-bottom: 7px;
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 1px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+    }
+}
+
+.task .events-item-date::before {
+    background: #4CC5AB;
+}
+
+.request .events-item-date::before {
+    background: #F1DA89;
+}
+
+.events-item-title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    color: #424552;
+    margin-bottom: 14px;
+}
+
+.events-item-info {
+    position: relative;
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 28px 28px 8px 36px;
+    overflow: hidden;
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        height: 100%;
+        width: 2px;
+        border-radius: 10px 0 0 10px;
+        -webkit-border-radius: 10px 0 0 10px;
+        -moz-border-radius: 10px 0 0 10px;
+        -ms-border-radius: 10px 0 0 10px;
+        -o-border-radius: 10px 0 0 10px;
+        overflow: hidden;
+    }
+    b {
+        display: block;
+        font-weight: 600;
+        font-size: 10px;
+        line-height: 100%;
+        color: #96979B;
+        margin-bottom: 7px;
+    }
+    span {
+        display: block;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 100%;
+        color: #424552;
+        margin-bottom: 20px;
+    }
+}
+
+.task .events-item-info::before {
+    background: #4CC5AB;
+}
+
+.request .events-item-info::before {
+    background: #F1DA89;
+}
+
+.events-item-info-status {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    color: #424552;
+    padding-bottom: 27px;
+    border-bottom: 1px solid #E3E3E3;
+    margin-bottom: 20px;
+}
+
 
 /* I E   S T Y L E S */
 
