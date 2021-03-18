@@ -93,9 +93,13 @@ $(function() {
         $(this).closest('.table-tr').toggleClass('active');
     });
 
+    $('.btn-filter').click(function() {
+        $('.events-dates').slideToggle();
+    });
+
 });
 
-$(window).on('load resize scroll', function() {
+$(window).on('load resize', function() {
 
     var width = $(window).width();
 
@@ -109,7 +113,7 @@ $(window).on('load resize scroll', function() {
     }
 
     if (width < '516') {
-        $('.menu').slick({
+        $('.menu').not('.slick-initialized').slick({
             slidesToShow: 1,
             infinite: false,
             arrows: false,
@@ -118,11 +122,10 @@ $(window).on('load resize scroll', function() {
             swipeToSlide: true,
             slidesToScroll: 1
         });
+    } else {
+        $('.menu').filter('.slick-initialized').slick('unslick');
     }
 
-    if (width > '515') {
-        $('.menu').slick('unslick');
-    }
 
 });
 //# sourceMappingURL=../sourcemaps/main.js.map
