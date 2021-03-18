@@ -94,14 +94,32 @@ $(function() {
     });
 
     $('.btn-filter').click(function() {
-        $('.events-dates').slideToggle();
+        $('.events-dates').toggleClass('active');
+        $('body').toggleClass('overlay');
+    });
+
+});
+
+$(window).on('load', function() {
+
+    var widthLoad = $(window).width();
+
+    if (widthLoad < '992') {
+        $(".events-dates").prepend("<a href='javascript:void(0);' class='filter-btn'></a>");
+        $(".events-dates").prepend("<a href='javascript:void(0);' class='filter-remove'>Сбросить</a>");
+        $(".events-dates").append("<a href='javascript:void(0);' class='filter-enter'>Применить</a>");
+    }
+
+    $('.filter-btn').click(function() {
+        $('.events-dates').removeClass('active');
+        $('body').removeClass('overlay');
     });
 
 });
 
 $(window).on('load resize', function() {
-
     var width = $(window).width();
+
 
     if (width < '801') {
         $('.menu').insertAfter($('.header-box'));
