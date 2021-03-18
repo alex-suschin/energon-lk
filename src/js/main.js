@@ -99,10 +99,6 @@ $(window).on('load resize scroll', function() {
 
     var width = $(window).width();
 
-    if ((width > '700') && (width < '1000')) {
-
-    }
-
     if (width < '801') {
         $('.menu').insertAfter($('.header-box'));
         $('.header').addClass('load');
@@ -110,6 +106,22 @@ $(window).on('load resize scroll', function() {
 
     if (width > '800') {
         $('.menu').insertAfter($('.logo'));
+    }
+
+    if (width < '516') {
+        $('.menu').slick({
+            slidesToShow: 1,
+            infinite: false,
+            arrows: false,
+            variableWidth: true,
+            dots: false,
+            swipeToSlide: true,
+            slidesToScroll: 1
+        });
+    }
+
+    if (width > '515') {
+        $('.menu').slick('unslick');
     }
 
 });
