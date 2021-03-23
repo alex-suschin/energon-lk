@@ -44,35 +44,83 @@ $(function() {
         lookup: contractors
     });
 
+    $('.elem-item-list').each(function() {
+        if ($(this).closest('.elem-item').attr('style') != 'display: none;') {
+            var Len = $(this).find('.elem-item-box').length;
+            if (Len == 2) {
+                $(this).children('.add-card').addClass('add-card-2');
+            } else if (Len == 1) {
+                $(this).children('.add-card').addClass('add-card-1');
+            }
+        }
+
+    });
+
     $('.btn-switch').click(function() {
         $('.elem-information__btns').find('.active').removeClass('active');
         $(this).addClass('active');
         $('.elem-information__box').find('.elem-item').hide();
         $('#' + $(this).data('switch')).show();
+        if ($(this).hasClass('active')) {
+            $('.elem-item-list').each(function() {
+                if ($(this).closest('.elem-item').attr('style') != 'display: none;') {
+                    var Len = $(this).find('.elem-item-box').length;
+                    if (Len == 2) {
+                        $(this).children('.add-card').addClass('add-card-2');
+                    } else if (Len == 1) {
+                        $(this).children('.add-card').addClass('add-card-1');
+                    }
+                }
+            });
+        }
     });
 
     $('.btn-more').click(function(e) {
-        $(this).addClass('active');
-        var btnItems = $(this).siblings('.btn-el-items');
-
-        if (btnItems.css('opacity') != '1') {
-            btnItems.css('opacity', '1');
-
-
-            var firstClickBtns = true;
-            $(document).bind('click.btns', function(e) {
-                if (!firstClickBtns && $(e.target).closest('.btn-el-items').length == 0) {
-                    btnItems.css('opacity', '0');
-                    $('.btn-more').removeClass('active');
-                    $(document).unbind('click.btns');
-                }
-
-                firstClickBtns = false;
-            });
-        }
-
         e.preventDefault();
+        $('.btn-el-items').css('opacity', '0');
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+            $('.btn-el-items').css('opacity', '0');
+        } else {
+            $(this).addClass('active');
+            var btnItems = $(this).siblings('.btn-el-items');
+            if (btnItems.css('opacity') != '1') {
+                btnItems.css('opacity', '1');
+            }
+        }
     });
+
+    $(document).mouseup(function(e) {
+        var div2 = $(".btn-el-items");
+        if (!div2.is(e.target) &&
+            div2.has(e.target).length === 0) {
+            $('.btn-more').removeClass('active');
+            $('.btn-el-items').css('opacity', '0');
+        }
+    });
+
+    // $('.btn-more').click(function(e) {
+    //     $(this).addClass('active');
+    //     var btnItems = $(this).siblings('.btn-el-items');
+
+    //     if (btnItems.css('opacity') != '1') {
+    //         btnItems.css('opacity', '1');
+
+
+    //         var firstClickBtns = true;
+    //         $(document).bind('click.btns', function(e) {
+    //             if (!firstClickBtns && $(e.target).closest('.btn-el-items').length == 0) {
+    //                 btnItems.css('opacity', '0');
+    //                 $('.btn-more').removeClass('active');
+    //                 $(document).unbind('click.btns');
+    //             }
+
+    //             firstClickBtns = false;
+    //         });
+    //     }
+
+    //     e.preventDefault();
+    // });
 
     $('#datepicker').datepicker({
         range: 'multiple',

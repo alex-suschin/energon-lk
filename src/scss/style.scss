@@ -1444,6 +1444,14 @@ select {
     }
 }
 
+.add-card-2 {
+    right: 34%;
+}
+
+.add-card-1 {
+    right: 68%;
+}
+
 .events-items {
     display: flex;
     flex-direction: column;
@@ -1687,6 +1695,99 @@ select {
     }
 }
 
+.date-plan-item {
+    .title {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 140%;
+        color: #878DA3;
+        text-transform: none;
+        margin-bottom: 37px;
+    }
+}
+
+.date-note-item {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 0 0 0 16px;
+    margin-bottom: 24px;
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 2px;
+        height: 100%;
+        border-radius: 10px;
+    }
+}
+
+.yellow::before {
+    background: #DFBC41;
+}
+
+.green::before {
+    background: #4CC5AB;
+}
+
+.red::before {
+    background: #F14D75;
+}
+
+.time {
+    padding: 2px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-right: 26px;
+}
+
+.time-start {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    color: #2E5BFF;
+}
+
+.time-finish {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 100%;
+    color: #BABABA;
+}
+
+.name-note {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    color: #424552;
+    margin-bottom: 17px;
+}
+
+.desc-note {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 100%;
+    color: #424552;
+}
+
+.date-plan-item {
+    padding-bottom: 26px;
+    margin-bottom: 22px;
+    border-bottom: 0.5px solid #E8E8E8;
+}
+
+.date-plan-item:last-child {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
 
 /* I E   S T Y L E S */
 
@@ -1708,6 +1809,25 @@ select {
     .modal-close:hover {
         opacity: 0.7;
     }
+}
+
+.plans-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.plans-box__left {
+    width: 23.53%;
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+.plans-box__right {
+    width: 74.51%;
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 40px 36px 0 36px;
 }
 
 
@@ -1748,6 +1868,12 @@ select {
     }
     a:focus {
         outline: none;
+    }
+    .add-card-2 {
+        right: 0;
+    }
+    .add-card-1 {
+        right: 51.5%;
     }
     .filters {
         width: 60%;
@@ -2148,6 +2274,9 @@ select {
     }
     .elem-item-box:nth-child(3n) {
         margin-right: 0;
+    }
+    .add-card-1 {
+        right: 0;
     }
 }
 
