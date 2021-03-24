@@ -139,6 +139,11 @@ $(function() {
         autoUpdate: true
     });
 
+    $('.btn-abc').click(function() {
+        $(this).toggleClass('active');
+        $('.alfavite').slideToggle(200);
+    });
+
     $('.plans-calendar').datepicker({});
 
     $('.end_one').click(function() {

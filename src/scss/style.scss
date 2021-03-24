@@ -578,6 +578,7 @@ select {
 }
 
 .filters {
+    position: relative;
     width: 50%;
     display: flex;
     justify-content: flex-start;
@@ -685,8 +686,52 @@ input[type="search"]::-webkit-search-results-decoration {
 .btn-abc {
     display: block;
     width: 35px;
+    cursor: pointer;
     height: 34px;
     background: url(../img/btn-abc.svg) no-repeat center;
+    @include transition02;
+    &.active {
+        background: url(../img/btn-abc-active.svg) no-repeat center;
+    }
+}
+
+.alfavite {
+    padding: 5px 5px 4px 5px;
+    position: absolute;
+    z-index: 999;
+    right: 49px;
+    top: 0;
+    min-width: 1115px;
+    display: none;
+    background: #FFFFFF;
+    border-radius: 10px;
+    &.active {
+        visibility: visible;
+        width: fit-content;
+        opacity: 1;
+    }
+    a {
+        display: block;
+        border-radius: 10px;
+        padding: 0px 11px 0 11px;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 214%;
+        text-align: center;
+        color: #878DA3;
+        &.active,
+        &:hover {
+            color: #2E5BFF;
+            background: #DCE2FD;
+        }
+    }
+}
+
+.alfavite-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .nice-select.open:after {
@@ -2058,6 +2103,10 @@ select {
     padding-top: 15px !important;
 }
 
+.alfavite-select {
+    display: none;
+}
+
 
 /* I E   S T Y L E S */
 
@@ -2330,6 +2379,12 @@ M O B I L E
     }
     a:focus {
         outline: none;
+    }
+    .alfavite {
+        min-width: auto;
+    }
+    .alfavite a {
+        padding: 0px 7px 0 7px;
     }
     .plans-box__right {
         width: 68%;
@@ -2605,6 +2660,13 @@ M O B I L E
 }
 
 @media screen and (max-width: 860px) {
+    .alfavite {
+        padding: 5px 5px 6px 5px;
+    }
+    .alfavite a {
+        font-size: 11px;
+        padding: 0px 5px 0 5px;
+    }
     .info-item-top__left {
         .in-work2,
         .in-work,
@@ -2683,6 +2745,48 @@ M O B I L E
 }
 
 @media screen and (max-width: 800px) {
+    .btn-abc {
+        display: none;
+    }
+    .alfavite-select {
+        display: block;
+        .nice-select {
+            display: block;
+            width: 35px;
+            cursor: pointer;
+            border: none;
+            height: 34px;
+            background: url(../img/btn-abc.svg) no-repeat center;
+            transition: all .2s linear;
+            -webkit-transition: all .2s linear;
+            -moz-transition: all .2s linear;
+            -ms-transition: all .2s linear;
+            -o-transition: all .2s linear;
+            span {
+                position: absolute;
+                right: -15px;
+                top: -3px;
+                font-weight: 500;
+            }
+        }
+        .nice-select:after {
+            content: none;
+        }
+        .list {
+            min-width: 266px;
+            display: flex;
+            flex-wrap: wrap;
+            li {
+                display: block;
+                width: 38px;
+                text-align: center;
+                height: 38px;
+                line-height: 38px;
+                padding: 0 5px;
+                box-sizing: border-box;
+            }
+        }
+    }
     .profile-hide {
         top: 52px;
     }
@@ -2931,4 +3035,10 @@ M O B I L E
     }
 }
 
-@media screen and (max-width: 767px) {}
+@media screen and (max-width: 475px) {
+    .alfavite-select .list {
+        left: initial;
+        left: 50%;
+        margin-left: -164px;
+    }
+}
