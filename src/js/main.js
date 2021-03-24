@@ -139,10 +139,7 @@ $(function() {
         autoUpdate: true
     });
 
-    $('.btn-abc').click(function() {
-        $(this).toggleClass('active');
-        $('.alfavite').slideToggle(200);
-    });
+
 
     $('.plans-calendar').datepicker({});
 
@@ -160,10 +157,6 @@ $(function() {
     });
 
 });
-
-if (/|webOS|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-    $('#alfavite-sel').niceSelect('destroy');
-}
 
 $(window).on('load', function() {
 
@@ -185,6 +178,14 @@ $(window).on('load', function() {
 $(window).on('load resize', function() {
     var width = $(window).width();
 
+
+    if (width > '1200') {
+        $('.btn-abc').click(function() {
+            $(this).toggleClass('active');
+            var toggleWidth = $(".alfavite").width() == 1115 ? "0px" : "1115px";
+            $('.alfavite').animate({ width: toggleWidth }, 100);
+        });
+    }
 
     if (width < '801') {
         $('.menu').insertAfter($('.header-box'));

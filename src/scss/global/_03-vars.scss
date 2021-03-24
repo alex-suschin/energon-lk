@@ -5,3 +5,11 @@
     -ms-transition: all .2s linear;
     -o-transition: all .2s linear;
 }
+
+@mixin transition04 {
+    transition: width .4s ease-in-out, opacity .2s ease-in-out, visibility .1s ease-in-out;
+    -webkit-transition: width .4s ease-in-out, opacity .2s ease-in-out, visibility .1s ease-in-out;
+    -moz-transition: width .4s ease-in-out, opacity .2s ease-in-out, visibility .1s ease-in-out;
+    -ms-transition: width .4s ease-in-out, opacity .2s ease-in-out, visibility .1s ease-in-out;
+    -o-transition: width .4s ease-in-out, opacity .2s ease-in-out, visibility .1s ease-in-out;
+}
