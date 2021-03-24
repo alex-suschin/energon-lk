@@ -133,6 +133,14 @@ $(function() {
         }
     });
 
+    $('.dates-plans').scrollbar({
+        ignoreOverlay: false,
+        autoScrollSize: true,
+        autoUpdate: true
+    });
+
+    $('.plans-calendar').datepicker({});
+
     $('.end_one').click(function() {
         $('.start_one').trigger('focus');
     });

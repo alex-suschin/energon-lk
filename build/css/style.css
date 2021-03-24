@@ -17,17 +17,17 @@
 
 @font-face {
   font-family: "Montserrat";
-  src: url("../fonts/Montserrat-SemiBold.eot");
-  src: url("../fonts/Montserrat-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff");
-  font-weight: 600;
+  src: url("../fonts/Montserrat-Regular.eot");
+  src: url("../fonts/Montserrat-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: "Montserrat";
-  src: url("../fonts/Montserrat-Regular.eot");
-  src: url("../fonts/Montserrat-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/Montserrat-SemiBold.eot");
+  src: url("../fonts/Montserrat-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff");
+  font-weight: 600;
   font-style: normal;
   font-display: swap; }
 
@@ -1742,7 +1742,7 @@ select {
       -ms-flex-align: stretch;
           align-items: stretch;
   padding: 0 0 0 16px;
-  margin-bottom: 24px; }
+  margin-bottom: 29px; }
   .date-note-item::before {
     content: '';
     display: block;
@@ -1764,7 +1764,7 @@ select {
   background: #F14D75; }
 
 .time {
-  padding: 2px 0 0 0;
+  padding: 2px 0 2px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1802,7 +1802,7 @@ select {
 .desc-note {
   font-weight: normal;
   font-size: 12px;
-  line-height: 100%;
+  line-height: 140%;
   color: #424552; }
 
 .date-plan-item {
@@ -1814,6 +1814,229 @@ select {
   border: none;
   margin-bottom: 0;
   padding-bottom: 0; }
+
+.scroll-wrapper {
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: relative; }
+
+.scroll-wrapper > .scroll-content {
+  border: none !important;
+  -webkit-box-sizing: content-box !important;
+  box-sizing: content-box !important;
+  height: auto;
+  left: 0;
+  margin: 0;
+  max-height: none;
+  max-width: none !important;
+  overflow: scroll !important;
+  padding: 0;
+  position: relative !important;
+  top: 0;
+  width: auto !important; }
+
+.scroll-wrapper > .scroll-content::-webkit-scrollbar {
+  height: 0;
+  width: 0; }
+
+.scroll-element,
+.scroll-element div {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+
+.scroll-element.scroll-x.scroll-scrollx_visible,
+.scroll-element.scroll-y {
+  display: block; }
+
+.scroll-element .scroll-bar,
+.scroll-element .scroll-arrow {
+  cursor: default; }
+
+.scroll-textarea {
+  border: 1px solid #cccccc;
+  border-top-color: #999999; }
+
+.scroll-textarea > .scroll-content {
+  overflow: hidden !important; }
+
+.scroll-textarea > .scroll-content > textarea {
+  border: none !important;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 100% !important;
+  margin: 0;
+  max-height: none !important;
+  max-width: none !important;
+  overflow: scroll !important;
+  outline: none;
+  padding: 2px;
+  position: relative !important;
+  top: 0;
+  width: 100% !important; }
+
+.scroll-textarea > .scroll-content > textarea::-webkit-scrollbar {
+  height: 0;
+  width: 0; }
+
+/*************** SIMPLE OUTER SCROLLBAR ***************/
+.scrollbar-outer > .scroll-element,
+.scrollbar-outer > .scroll-element div,
+.list + .scroll-element,
+.list + .scroll-element div {
+  border: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  z-index: 10; }
+
+.scrollbar-outer > .scroll-element,
+.list + .scroll-element {
+  background-color: transparent; }
+
+.scrollbar-outer > .scroll-element div,
+.list + .scroll-element div {
+  display: block;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%; }
+
+.scrollbar-outer > .scroll-element.scroll-x,
+.list + .scroll-element.scroll-x {
+  bottom: 0;
+  height: 12px;
+  left: 0;
+  width: 100%; }
+
+.scrollbar-outer > .scroll-element.scroll-y {
+  height: 100%;
+  right: 0;
+  top: 0;
+  width: 12px; }
+
+.list.scrollbar-outer + .scroll-element + .scroll-element.scroll-y {
+  right: 2px; }
+
+.scrollbar-outer > .scroll-element.scroll-x .scroll-element_outer,
+.list + .scroll-element.scroll-x .scroll-element_outer {
+  height: 8px;
+  top: 2px; }
+
+.scrollbar-outer > .scroll-element.scroll-y .scroll-element_outer,
+.list + .scroll-element.scroll-y .scroll-element_outer {
+  left: 9px;
+  width: 3px; }
+
+.scrollbar-outer > .scroll-element .scroll-element_outer,
+.list + .scroll-element .scroll-element_outer {
+  overflow: hidden; }
+
+.scrollbar-outer > .scroll-element .scroll-element_track,
+.list + .scroll-element .scroll-element_track {
+  background-color: transparent; }
+
+.scrollbar-outer > .scroll-element .scroll-element_outer,
+.scrollbar-outer > .scroll-element .scroll-element_track,
+.scrollbar-outer > .scroll-element .scroll-bar {
+  border-radius: 8px; }
+
+.scrollbar-outer > .scroll-element .scroll-bar {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 9px; }
+
+.scrollbar-outer > .scroll-element .scroll-bar:hover {
+  background: rgba(0, 0, 0, 0.15); }
+
+/* scrollbar height/width & offset from container borders */
+.scrollbar-outer > .scroll-content.scroll-scrolly_visible {
+  left: 0;
+  margin-left: 0; }
+
+.scrollbar-outer > .scroll-content.scroll-scrollx_visible {
+  top: -12px;
+  margin-top: 12px; }
+
+.scrollbar-outer > .scroll-element.scroll-x .scroll-bar {
+  min-width: 10px; }
+
+.scrollbar-outer > .scroll-element.scroll-y .scroll-bar {
+  min-height: 10px; }
+
+/* update scrollbar offset if both scrolls are visible */
+.scrollbar-outer > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_track {
+  left: -14px; }
+
+.scrollbar-outer > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_track {
+  top: -14px; }
+
+.scrollbar-outer > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_size {
+  left: -14px; }
+
+.scrollbar-outer > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_size {
+  top: -14px; }
+
+.external-scroll_x,
+.external-scroll_y {
+  background: #EDEDED;
+  border-radius: 2px;
+  cursor: pointer;
+  display: none;
+  position: absolute; }
+
+.external-scroll_x.scroll-scrollx_visible {
+  display: block;
+  height: 4px;
+  left: 0;
+  bottom: 0;
+  width: 100%; }
+
+.external-scroll_y.scroll-scrolly_visible {
+  display: block;
+  height: 200px;
+  left: 610px;
+  top: 0;
+  width: 10px; }
+
+.external-scroll_x div,
+.external-scroll_y div {
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 100%; }
+
+.external-scroll_x .scroll-bar,
+.external-scroll_y .scroll-bar {
+  background: #CECECE;
+  border-radius: 2px;
+  z-index: 12; }
+
+.external-scroll_x .scroll-bar {
+  width: 100px; }
+
+.external-scroll_y .scroll-bar {
+  height: 100px; }
+
+.dropzone-images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-top: 15px !important; }
+
+.scrollbar-external_wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 150px; }
+
+#forQueue {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-top: 15px !important; }
 
 /* I E   S T Y L E S */
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
@@ -1836,9 +2059,9 @@ select {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
 
 .plans-box__left {
   width: 23.53%;
@@ -1846,13 +2069,70 @@ select {
   border-radius: 10px; }
 
 .plans-box__right {
+  position: relative;
   width: 74.51%;
   background: #FFFFFF;
   border-radius: 10px;
   padding: 40px 36px 0 36px; }
+  .plans-box__right .add-card {
+    z-index: 999;
+    top: 35px;
+    right: 36px;
+    background: #fff;
+    padding: 5px 0 5px 10px; }
+
+.datepicker--nav-action:hover path {
+  stroke: #2E5BFF; }
+
+.plans-calendar {
+  position: relative;
+  padding: 0 0 22px 0; }
+  .plans-calendar .datepicker {
+    min-width: 292px;
+    max-width: 318px;
+    margin: 0 auto; }
+  .plans-calendar .datepicker--days-names::after {
+    width: 98%; }
+  .plans-calendar .datepicker--nav-title,
+  .plans-calendar .datepicker--nav-action {
+    color: #2E5BFF;
+    font-weight: 500; }
+  .plans-calendar .datepicker--nav-title i {
+    color: #2E5BFF;
+    font-weight: 500; }
+  .plans-calendar .datepicker--nav {
+    padding: 25px 14px 5px 14px; }
+  .plans-calendar .datepicker--days-names {
+    padding: 0 7px 14px 7px; }
+  .plans-calendar .datepicker--cell {
+    margin: 0 10.5px;
+    width: 7.24%;
+    margin-bottom: 14px; }
+  .plans-calendar .datepicker--day-name {
+    margin: 0 25px 0 0; }
+  .plans-calendar .datepicker--day-name:last-child {
+    margin: 0 0 0 0; }
+  .plans-calendar .datepicker--nav-action {
+    background: transparent;
+    -webkit-box-shadow: none;
+            box-shadow: none; }
+  .plans-calendar .datepicker--nav-action[data-action="prev"] {
+    right: 88px; }
+  .plans-calendar .datepicker--nav-action[data-action="next"] {
+    right: 22px; }
+  .plans-calendar .datepicker--cell-month {
+    width: 23%; }
+  .plans-calendar .datepicker--cell-year {
+    width: 25%;
+    height: 28.33%; }
+
+.dates-plans {
+  width: 101%;
+  padding: 0 25px 50px 0 !important;
+  max-height: 878px; }
 
 /* 
-    M O B I L E
+M O B I L E
 */
 @media screen and (max-width: 1565px) {
   .elem-item-box {
@@ -1872,6 +2152,42 @@ select {
   .table-th {
     font-size: 10px; } }
 
+@media screen and (max-width: 1360px) {
+  .plans-box__left {
+    max-width: 288px;
+    width: 100%;
+    -ms-flex-negative: 0;
+        flex-shrink: 0; }
+  .plans-calendar .datepicker {
+    max-width: 100%;
+    min-width: 100%; }
+  .plans-box__left,
+  .plans-calendar {
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px; }
+  .plans-calendar .datepicker--day-name {
+    margin: 0 17px 0 0; }
+  .datepicker--content {
+    padding: 4px 22px 4px 22px; }
+  .plans-calendar .datepicker--days-names {
+    padding: 0 0 12px 0; }
+  .plans-calendar .datepicker--days-names::after {
+    width: 100%;
+    left: 0; }
+  .datepicker--cells {
+    margin: 0 -10px; }
+  .plans-calendar .datepicker--cell {
+    margin: 0 7px;
+    width: 8.335%;
+    margin-bottom: 14px; }
+  .plans-calendar .datepicker--cell-month {
+    width: 23%; }
+  .plans-calendar .datepicker--cell-year {
+    width: 25%; } }
+
 @media screen and (max-width: 1200px) {
   html,
   body {
@@ -1880,6 +2196,8 @@ select {
     overflow-x: hidden; }
   a:focus {
     outline: none; }
+  .plans-box__right {
+    width: 68%; }
   .add-card-2 {
     right: 0; }
   .add-card-1 {
@@ -1935,6 +2253,10 @@ select {
     width: 48.3%; } }
 
 @media screen and (max-width: 991px) {
+  .plans-box__right {
+    width: 65%; }
+  .dates-plans {
+    width: 102%; }
   .events-dates .select-box {
     min-width: 66.48%;
     margin-right: 0;
@@ -2060,7 +2382,46 @@ select {
     margin-bottom: 20px;
     padding: 25px 20px 20px 20px; }
   .elem-item-box {
-    width: 47.9%; } }
+    width: 47.9%; }
+  .name-note {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 140%;
+    margin-bottom: 16px; }
+  .time-start {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    margin-bottom: 0;
+    position: absolute;
+    top: 0;
+    left: 16px; }
+  .time-finish {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 16px; }
+  .date-note-desc {
+    padding: 28px 0 28px 0; }
+  .time {
+    margin-right: 0; }
+  .plans-box__right {
+    width: 58%;
+    padding: 18px 16px 0 16px; }
+  .date-plan-item .title {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 140%;
+    margin-bottom: 29px; }
+  .date-plan-item {
+    padding-bottom: 0;
+    margin-bottom: 30px;
+    border: none; }
+  .plans-box__right .add-card {
+    top: 18px;
+    right: 16px; } }
 
 @media screen and (max-width: 860px) {
   .info-item-top__left .in-work2,
@@ -2252,7 +2613,23 @@ select {
   .elem-item-box:nth-child(3n) {
     margin-right: 0; }
   .add-card-1 {
-    right: 0; } }
+    right: 0; }
+  .plans-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .plans-box__left {
+    width: 100%;
+    max-width: 100%;
+    background: #fff;
+    margin-bottom: 20px; }
+  .plans-calendar {
+    max-width: 288px;
+    width: 100%;
+    margin: 0 auto; }
+  .plans-box__right {
+    width: 100%; } }
 
 @media screen and (max-width: 575px) {
   .elem-line__content {
@@ -2307,7 +2684,11 @@ select {
     padding-bottom: 20px;
     margin-bottom: 14px; }
   .events-item {
-    margin-bottom: 30px; } }
+    margin-bottom: 30px; }
+  .plans-box__right .add-card {
+    bottom: initial; }
+  .dates-plans {
+    padding: 0 5px 15px 0 !important; } }
 
 @media screen and (max-width: 515px) {
   .menu {
