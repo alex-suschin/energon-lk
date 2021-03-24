@@ -724,7 +724,12 @@ input[type="search"]::-webkit-search-results-decoration {
     font-size: 12px;
     line-height: 214%;
     text-align: center;
-    color: #878DA3; }
+    color: #878DA3;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
     .alfavite a.active, .alfavite a:hover {
       color: #2E5BFF;
       background: #DCE2FD; }

@@ -161,6 +161,10 @@ $(function() {
 
 });
 
+if (/|webOS|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+    $('#alfavite-sel').niceSelect('destroy');
+}
+
 $(window).on('load', function() {
 
     var widthLoad = $(window).width();
