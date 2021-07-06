@@ -17,6 +17,7 @@ $(function() {
         });
     });
 
+
     $('#hamburger-icon').click(function() {
         $(this).toggleClass('active');
         if ($(this).hasClass('active')) {
@@ -173,6 +174,17 @@ $(function() {
         $('body').toggleClass('overlay');
     });
 
+});
+
+$('body').on('click', '.pass-show', function(e) {
+    e.preventDefault();
+    if ($(this).hasClass('active')) {
+        $(this).removeClass('active');
+        $('#user-auth-password').attr('type', 'password');
+    } else {
+        $(this).addClass('active');
+        $('#user-auth-password').attr('type', 'text');
+    }
 });
 
 $(window).on('load', function() {

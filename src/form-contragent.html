@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('components/page/_1_head.html',{ 'title': 'Энергон', 'description': 'Описание', 'keywords': 'Ключевые слова', 'favicon': 'img/favicon/favicon.png' })
+
+<body>
+    <div class="wrapper">
+        @@include('components/page/_2_header.html',{'class':'active'})
+        <div class="content-box">
+            <img class="decor1" src="img/decor1.png" alt="">
+            <img class="decor2" src="img/decor2.png" alt="">
+
+            <div class="content-box__back-line">
+                <div class="container">
+                    <a href="#" class="back">Назад</a>
+                </div>
+            </div>
+
+            <div class="form-contragent-wrap">
+                <div class="container">
+                    <form action="/" class="contragent-form" method="post">
+                        <div class="btn-more-box">
+                            <a class="btn-more" href="javascrirpt:void(0)">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </a>
+                            <div class="btn-el-items" style="opacity: 0;">
+                                <a href="#" class="btn-el btn-del"></a>
+                                <a href="#" class="btn-el btn-edit"></a>
+                            </div>
+                        </div>
+                        <div class="title">Добавление контрагента</div>
+                        <div class="contragent-form-box">
+                            <div class="contragent-form__item">
+                                <label for="">ИНН</label>
+                                <input type="text">
+                            </div>
+                            <div class="contragent-form__item">
+                                <label for="">Правовая форма</label>
+                                <input type="text">
+                            </div>
+                            <div class="contragent-form__item">
+                                <label for="">Город</label>
+                                <input type="text">
+                            </div>
+                            <div class="contragent-form__item">
+                                <label for="">Адрес</label>
+                                <input type="text">
+                            </div>
+                            <div class="contragent-form__item">
+                                <label for="">Тип клиента</label>
+                                <select name="" id="">
+                                    <option value="Тип клиента" disabled selected>Тип клиента</option>
+                                    <option value="ООО">ООО</option>
+                                    <option value="ОАО">ОАО</option>
+                                    <option value="ИП">ИП</option>
+                                </select>
+                            </div>
+                            <div class="contragent-form__item">
+                                <label for="">Тип закупки</label>
+                                <select name="" id="">
+                                    <option value="Тип закупки" disabled selected>Тип закупки</option>
+                                    <option value="ООО">ООО</option>
+                                    <option value="ОАО">ОАО</option>
+                                    <option value="ИП">ИП</option>
+                                </select>
+                            </div>
+                            <div class="contragent-form__item">
+                                <label for="">Статус клиента</label>
+                                <select name="" id="">
+                                    <option value="Статус клиента" disabled selected>Статус клиента</option>
+                                    <option value="ООО">ООО</option>
+                                    <option value="ОАО">ОАО</option>
+                                    <option value="ИП">ИП</option>
+                                </select>
+                            </div>
+                            <div class="contragent-form__item">
+                                <label for="">Потенциал клиента</label>
+                                <select name="" id="">
+                                    <option value="Потенциал клиента" disabled selected>Потенциал клиента</option>
+                                    <option value="ООО">ООО</option>
+                                    <option value="ОАО">ОАО</option>
+                                    <option value="ИП">ИП</option>
+                                </select>
+                            </div>
+                            <div class="contragent-form__item big">
+                                <label for="">Описание компании</label>
+                                <textarea name="" id="desc-comnpany"></textarea>
+                            </div>
+
+                            <div class="personal-form">
+                                <div class="personal-form__top">
+                                    <b>Сотрудник # 1</b>
+                                    <a href="javascript:void(0)" class="add-card"><span>Добавить сотрудника</span><i></i></a>
+                                </div>
+                                <div class="personal-box">
+                                    <div class="contragent-form__item">
+                                        <label for="">Должность</label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="contragent-form__item">
+                                        <label for="">Имя</label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="contragent-form__item">
+                                        <label for="">Фамилия</label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="contragent-form__item">
+                                        <label for="">Отчество</label>
+                                        <input type="text">
+                                    </div>
+                                </div>
+
+                                <div class="personal-phones">
+                                    <div class="contragent-form__item">
+                                        <label for="">Рабочий телефон</label>
+                                        <input type="tel">
+                                    </div>
+                                    <div class="contragent-form__item">
+                                        <label for="">Рабочий телефон # 2</label>
+                                        <input type="tel">
+                                        <a href="#" class="remove"></a>
+                                    </div>
+                                    <a href="javascript:void(0)" class="add-card"><span>Добавить</span><i></i></a>
+                                </div>
+
+                                <div class="personal-mails">
+                                    <div class="contragent-form__item">
+                                        <label for="">Рабочий e-mail</label>
+                                        <input type="email">
+                                    </div>
+                                    <a href="javascript:void(0)" class="add-card"><span>Добавить</span><i></i></a>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn-blue">Добавить</button>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        @@include('components/page/_3_footer.html')
+    </div>
+
+    @@include('components/page/_4_scripts.html')
+</body>
+
+</html>
