@@ -1,5 +1,22 @@
 $(function() {
 
+    $(window).on('load', function() {
+        let phones = [
+            { 'mask': '+7 \\ \\ ###-###-##-##' }
+        ];
+
+        $('input[type=tel]').inputmask({
+            mask: phones,
+            greedy: false,
+            definitions: {
+                '#': {
+                    validator: '[0-9]',
+                    cardinality: 1
+                }
+            }
+        });
+    });
+
     $('#hamburger-icon').click(function() {
         $(this).toggleClass('active');
         if ($(this).hasClass('active')) {

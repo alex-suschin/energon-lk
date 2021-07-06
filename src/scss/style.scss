@@ -2302,6 +2302,109 @@ select {
     color: #96979B;
 }
 
+.body-wrap-form {
+    background: #fff;
+}
+
+.wrap-form {
+    min-height: 100vh;
+    padding-bottom: 50px;
+    padding-top: 52px;
+}
+
+.wrap-form .logo {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 52px;
+}
+
+.wrap-form .title-form {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 23px;
+}
+
+.form-serv {
+    padding: 39px 42px 27px 42px;
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 12px;
+    max-width: 372px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.wrap-form .form-item {
+    position: relative;
+    margin-bottom: 20px;
+    .pass-show {
+        position: absolute;
+        top: 40px;
+        right: 21px;
+        width: 14px;
+        height: 9px;
+        background: url(../img/eye.svg) no-repeat center;
+    }
+}
+
+.wrap-form .form-item label {
+    display: block;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 100%;
+    color: #96979B;
+    margin-bottom: 10px;
+}
+
+.wrap-form .form-item input {
+    display: block;
+    width: 100%;
+    border: 1px solid #EAEAEA;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 12px;
+    padding: 0 22px;
+    height: 45px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+}
+
+.wrap-form .btn-blue {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    padding: 16px 0 15px 0;
+    background: #2E5BFF;
+    border-radius: 10px;
+    color: #fff;
+    margin-top: 42px;
+}
+
+.foget-pass {
+    display: block;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 20px;
+    font-size: 12px;
+    line-height: 150%;
+    text-align: center;
+    -webkit-text-decoration-line: underline;
+    text-decoration-line: underline;
+    color: #000000;
+}
+
 
 /* 
 M O B I L E
