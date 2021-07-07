@@ -2509,9 +2509,22 @@ select {
         display: block;
         width: 13px;
         height: 13px;
-        background: url(../img/remove.svg) no-repeat center;
+        background-color: #C4C4C4;
+        background-image: url(../img/remove.svg);
+        background-position: center;
+        background-repeat: no-repeat;
         top: 35px;
         right: 11px;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        @include transition02;
+        &:hover,
+        &.active {
+            background-color: #989898;
+        }
     }
 }
 
@@ -2562,7 +2575,95 @@ select {
     align-items: flex-start;
     .add-card {
         position: static;
-        margin-top: 30px;
+        align-self: flex-end;
+        margin-bottom: 42px;
+    }
+}
+
+.popup-wrap {
+    background-color: rgba(0, 0, 0, 0.7);
+    display: block;
+    opacity: 0;
+    overflow: auto;
+    position: fixed;
+    z-index: 999999;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    visibility: hidden;
+    transition: all .5s linear;
+    -webkit-transition: all .5s linear;
+    -moz-transition: all .5s linear;
+    -ms-transition: all .5s linear;
+    -o-transition: all .5s linear;
+}
+
+.popup {
+    display: block;
+    position: relative;
+    max-width: 708px;
+    padding: 70px 25px 70px 25px;
+    margin: 100px auto 100px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s linear;
+    -webkit-transition: all .5s linear;
+    -moz-transition: all .5s linear;
+    -ms-transition: all .5s linear;
+    -o-transition: all .5s linear;
+    z-index: 999;
+    img {
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+    .title {
+        text-transform: none;
+        font-weight: normal;
+        font-size: 24px;
+        text-align: center;
+        line-height: 100%;
+        color: #424552;
+        margin-bottom: 25px;
+    }
+}
+
+.popup-active {
+    visibility: visible;
+    opacity: 1;
+    outline: none;
+}
+
+.popup-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+        display: block;
+        margin: 0 6px;
+        max-width: 196px;
+        text-align: center;
+        width: 100%;
+        padding: 16px 0 15px 0;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 100%;
+        &:only-child {
+            max-width: 222px;
+        }
+    }
+    .btn-white {
+        border: 1px solid #2E5BFF;
+        box-sizing: border-box;
+        border-radius: 10px;
+        color: #2E5BFF;
+    }
+    .btn-blue {
+        background: #2E5BFF;
+        border-radius: 10px;
+        color: #fff;
     }
 }
 
@@ -2583,7 +2684,7 @@ M O B I L E
     }
     .contragent-form__item {
         max-width: 100%;
-        width: 23.4%;
+        width: 23.8%;
     }
     .contragent-form__item.big {
         margin-right: 0;
@@ -2601,6 +2702,20 @@ M O B I L E
     }
     .table-th {
         font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 1480px) {
+    .contragent-form__item {
+        max-width: 100%;
+        width: 23.7%;
+    }
+}
+
+@media screen and (max-width: 1380px) {
+    .contragent-form__item {
+        max-width: 100%;
+        width: 23.65%;
     }
 }
 
@@ -2648,6 +2763,20 @@ M O B I L E
     }
     .plans-calendar .datepicker--cell-year {
         width: 25%;
+    }
+}
+
+@media screen and (max-width: 1330px) {
+    .contragent-form__item {
+        max-width: 100%;
+        width: 23.55%;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .contragent-form__item {
+        max-width: 100%;
+        width: 23.5%;
     }
 }
 
@@ -2744,7 +2873,7 @@ M O B I L E
     }
     .contragent-form__item {
         max-width: 100%;
-        width: 31%;
+        width: 31.9%;
     }
     .contragent-form__item.big {
         margin-right: 0;
@@ -2759,6 +2888,13 @@ M O B I L E
     }
 }
 
+@media screen and (max-width: 1140px) {
+    .contragent-form__item {
+        max-width: 100%;
+        width: 31.8%;
+    }
+}
+
 @media screen and (max-width: 1100px) {
     .elem-line__content {
         flex-wrap: wrap;
@@ -2769,6 +2905,13 @@ M O B I L E
     }
     .elem-line {
         padding: 41px 85px 14px 36px;
+    }
+}
+
+@media screen and (max-width: 1160px) {
+    .contragent-form__item {
+        max-width: 100%;
+        width: 31.7%;
     }
 }
 
@@ -2804,6 +2947,13 @@ M O B I L E
     }
     .elem-item-box {
         width: 48.3%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .contragent-form__item {
+        max-width: 100%;
+        width: 31.6%;
     }
 }
 
@@ -2925,6 +3075,13 @@ M O B I L E
         -moz-transform: translateY(0);
         -ms-transform: translateY(0);
         -o-transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .contragent-form__item {
+        max-width: 100%;
+        width: 31.5%;
     }
 }
 
@@ -3257,6 +3414,33 @@ M O B I L E
     .stat-item-bottom {
         padding: 20px 15px 15px 15px;
     }
+    .contragent-form__item {
+        max-width: 100%;
+        width: 100%;
+        margin-right: 0;
+    }
+    .contragent-form__item:nth-child(3n) {
+        margin-right: 0;
+    }
+    .contragent-form .title {
+        font-size: 20px;
+        padding-right: 10px;
+    }
+    .contragent-form {
+        padding: 25px 15px 30px 15px;
+    }
+    .personal-form__top .add-card span {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+    .personal-form__top b {
+        font-size: 14px;
+        margin-bottom: 15px;
+        margin-right: 5px;
+    }
+    .personal-form__top .add-card i {
+        margin-top: -15px;
+    }
 }
 
 @media screen and (max-width: 575px) {
@@ -3326,6 +3510,12 @@ M O B I L E
     }
     .dates-plans {
         padding: 0 5px 15px 0 !important;
+    }
+    .personal-form__top {
+        flex-wrap: wrap;
+    }
+    .form-serv {
+        padding: 25px 10px 25px 10px;
     }
 }
 
