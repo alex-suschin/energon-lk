@@ -151,15 +151,26 @@ $(function() {
         }
     });
 
-    // $('.date-request').datepicker({
+    var objToStick = $("#objToStick"); //Получаем нужный объект
+    var topOfObjToStick = $(objToStick).offset().top; //Получаем начальное расположение нашего блока
 
-    // });
+    $(window).scroll(function() {
+        var windowScroll = $(window).scrollTop(); //Получаем величину, показывающую на сколько прокручено окно
+
+        if (windowScroll > topOfObjToStick) { // Если прокрутили больше, чем расстояние до блока, то приклеиваем его
+            $(objToStick).addClass("topWindow");
+        } else {
+            $(objToStick).removeClass("topWindow");
+        };
+    });
+
+    $('.date-request').datepicker({
+
+    });
 
     $('.date-new-event').datepicker({
 
     });
-
-
 
     $('.plans-box__right .add-card').click(function() {
         elementClick = $(this).attr("href")
@@ -213,6 +224,7 @@ $(function() {
     $('.btn-filter').click(function() {
         $('.events-dates').toggleClass('active');
         $('body').toggleClass('overlay');
+
     });
 
 });
@@ -303,22 +315,6 @@ $(window).on('load resize', function() {
         $('.btn-new-event').prependTo($('.events-dates'));
     }
 
-    if (width > '750') {
-        var objToStick = $("#objToStick");
-        var topOfObjToStick = $(objToStick).offset().top;
-
-        $(window).scroll(function() {
-            var windowScroll = $(window).scrollTop();
-
-            if (windowScroll > topOfObjToStick) {
-                $(objToStick).addClass("topWindow");
-            } else {
-                $(objToStick).removeClass("topWindow");
-            };
-        });
-    }
-
 
 });
-//# sourceMappingURL=../sourcemaps/main.js.map
 //# sourceMappingURL=../sourcemaps/main.js.map
