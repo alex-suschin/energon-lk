@@ -151,11 +151,63 @@ $(function() {
         }
     });
 
-    $('.dates-plans').scrollbar({
-        ignoreOverlay: false,
-        autoScrollSize: true,
-        autoUpdate: true
+    var objToStick = $("#objToStick"); //Получаем нужный объект
+    var topOfObjToStick = $(objToStick).offset().top; //Получаем начальное расположение нашего блока
+
+    $(window).scroll(function() {
+        var windowScroll = $(window).scrollTop(); //Получаем величину, показывающую на сколько прокручено окно
+
+        if (windowScroll > topOfObjToStick) { // Если прокрутили больше, чем расстояние до блока, то приклеиваем его
+            $(objToStick).addClass("topWindow");
+        } else {
+            $(objToStick).removeClass("topWindow");
+        };
     });
+
+    $('.date-request').datepicker({
+
+    });
+
+    $('.date-new-event').datepicker({
+
+    });
+
+    $('.plans-box__right .add-card').click(function() {
+        elementClick = $(this).attr("href")
+        destination = $(elementClick).offset().top;
+        $("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination }, 700);
+        setTimeout(() => {
+            $('.plans-request .btn-blue').trigger('click');
+        }, 500);
+
+        return false;
+    });
+
+    // $('#time-from').datepicker({
+    //     range: 'multiple',
+    //     showWeek: true,
+    //     firstDay: 1,
+    //     timeFormat: 'HH:mm',
+    //     dateFormat: 'mm.dd.yyyy',
+    //     onSelect: function(fd, d, picker) {
+    //         $(".start_one").val(fd.split("-")[0]);
+    //         $(".end_one").val(fd.split("-")[1]);
+    //     }
+    // });
+
+    // $('.dates-plans').scrollbar({
+    //     ignoreOverlay: false,
+    //     autoScrollSize: true,
+    //     autoUpdate: true
+    // });
+
+    // $('.list').addClass('scrollbar-outer');
+
+    // $('.nice-select .list').scrollbar({
+    //     ignoreOverlay: false,
+    //     autoScrollSize: true,
+    //     autoUpdate: false
+    // });
 
 
 
@@ -172,9 +224,27 @@ $(function() {
     $('.btn-filter').click(function() {
         $('.events-dates').toggleClass('active');
         $('body').toggleClass('overlay');
+
     });
 
 });
+
+$('.plans-request .btn-blue').click(function(e) {
+    e.preventDefault();
+    $('.plans-request-info').hide();
+    $('.plans-request-form').show();
+});
+
+$('.btn-new-event').click(function(e) {
+    e.preventDefault();
+    $('.new-event-box').show();
+});
+
+$('.new-event-box__top a').click(function(e) {
+    e.preventDefault();
+    $('.new-event-box').hide();
+});
+
 
 $('body').on('click', '.pass-show', function(e) {
     e.preventDefault();
@@ -237,6 +307,12 @@ $(window).on('load resize', function() {
         });
     } else {
         $('.menu').filter('.slick-initialized').slick('unslick');
+    }
+
+    if (width < '992') {
+        $('.btn-new-event').prependTo($('#tab_1'));
+    } else {
+        $('.btn-new-event').prependTo($('.events-dates'));
     }
 
 

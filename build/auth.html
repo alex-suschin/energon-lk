@@ -37,7 +37,7 @@
                 <form class="form-serv" action="/" method="post">
                     <div class="form-item">
                         <label for="">Имя</label>
-                        <input type="text" required id="user-auth-name">
+                        <input class="error" type="text" required id="user-auth-name">
                     </div>
                     <div class="form-item">
                         <a href="#" class="pass-show"></a>
@@ -47,12 +47,14 @@
                     <button id="submit" class="btn-blue" type="submit">Применить</button>
                     <a href="#" class="foget-pass">Забыли пароль?</a>
                 </form>
+
+                <div class="message-form message-error">Адрес электронной почты указан не корректно</div>
             </div>
         </div>
     </div>
 
     <script src="js/vendor.min.js"></script>
-<script src="js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

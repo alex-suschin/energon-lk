@@ -30,30 +30,30 @@
 <body>
     <div class="wrapper">
         <header class="header">
-    <div class="header-box">
-        <a href="#" class="logo"><img src="img/logo.svg" alt=""></a>
-        <ul class="menu">
-            <li><a href="#">Контрагенты</a></li>
-            <li><a href="#">Планировщик</a></li>
-            <li><a href="#">Статистика</a></li>
-        </ul>
-        <div class="profile">
-            <div class="profile-name">
-                <b>User Name</b>
-                <span>description</span>
+            <div class="header-box">
+                <a href="#" class="logo"><img src="img/logo.svg" alt=""></a>
+                <ul class="menu">
+                    <li><a href="#">Контрагенты</a></li>
+                    <li><a href="#">Планировщик</a></li>
+                    <li><a href="#">Статистика</a></li>
+                </ul>
+                <div class="profile">
+                    <div class="profile-name">
+                        <b>User Name</b>
+                        <span>description</span>
+                    </div>
+                    <div class="profile-image">
+                        <img src="img/logo.svg" alt="">
+                    </div>
+                    <div class="profile-hide">
+                        <a href="#" class="lk-link">Личный кабинет</a>
+                        <a href="#" class="settings-link">Настройки</a>
+                        <a href="#" class="note-link">Уведомления</a>
+                        <a href="#" class="log-out-link">Выход</a>
+                    </div>
+                </div>
             </div>
-            <div class="profile-image">
-                <img src="img/logo.svg" alt="">
-            </div>
-            <div class="profile-hide">
-                <a href="#" class="lk-link">Личный кабинет</a>
-                <a href="#" class="settings-link">Настройки</a>
-                <a href="#" class="note-link">Уведомления</a>
-                <a href="#" class="log-out-link">Выход</a>
-            </div>
-        </div>
-    </div>
-</header>
+        </header>
         <div class="content-box">
             <img class="decor1" src="img/decor1.png" alt="">
             <img class="decor2" src="img/decor2.png" alt="">
@@ -61,25 +61,39 @@
             <div class="content-box__back-line">
                 <div class="container">
                     <a href="#" class="back">Назад</a>
+                    <div class="form-contragent-top">
+                        <div class="title">Добавление контрагента</div>
+                        <div class="search">
+                            <input type="search" id="search" placeholder="Поиск" autocomplete="off">
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="form-contragent-wrap">
                 <div class="container">
+
                     <form action="/" class="contragent-form" method="post">
+                        <!-- <div class="message-contragent">
+                            <span>Контрагент занят</span>
+                            <div>
+                                <a href="#" class="btn-blue">Продолжить</a>
+                                <a href="#" class="btn-white">Отменить</a>
+                            </div>
+                        </div> -->
                         <div class="btn-more-box">
-                            <a class="btn-more" href="javascrirpt:void(0)">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </a>
                             <div class="btn-el-items" style="opacity: 0;">
                                 <a href="#" class="btn-el btn-del"></a>
                                 <a href="#" class="btn-el btn-edit"></a>
                             </div>
                         </div>
-                        <div class="title">Добавление контрагента</div>
+
+                        <div class="contragent-form__item contragent-form__item50">
+                            <label for="">Наименование организации</label>
+                            <input type="text">
+                        </div>
                         <div class="contragent-form-box">
+
                             <div class="contragent-form__item">
                                 <label for="">ИНН</label>
                                 <input type="text">
@@ -120,6 +134,27 @@
                                     <option value="Статус клиента" disabled selected>Статус клиента</option>
                                     <option value="ООО">ООО</option>
                                     <option value="ОАО">ОАО</option>
+                                    <option value="ИП">ИП</option>
+                                    <option value="ИП">ИП</option>
+                                    <option value="ИП">ИП</option>
+                                    <option value="ИП">ИП</option>
+                                    <option value="ИП">ИП</option>
+                                    <option value="ИП">ИП</option>
+                                    <option value="ИП">ИП</option>
+                                    <option value="ИП">ИП</option>
+                                    <option value="ИП">ИП</option>
+                                    <option value="ИП">ИП</option>
+                                    <option value="ИП">ИП</option>
+                                    <option value="ИП">ИП</option>
+                                    <option value="ИП">ИП</option>
+                                    <option value="ИП">ИП</option>
+                                    <option value="ИП">ИП</option>
+                                    <option value="ИП">ИП</option>
+                                    <option value="ИП">ИП</option>
+                                    <option value="ИП">ИП</option>
+                                    <option value="ИП">ИП</option>
+                                    <option value="ИП">ИП</option>
+                                    <option value="ИП">ИП</option>
                                     <option value="ИП">ИП</option>
                                 </select>
                             </div>
@@ -183,7 +218,20 @@
                                 </div>
                             </div>
 
-                            <button type="submit" class="btn-blue">Добавить</button>
+                            <div class="form-btns">
+                                <button type="submit" class="btn-blue" disabled>Добавить</button>
+                                <div class="message-form message-ok">Контрагент успешно добавлен</div>
+                                <div class="message-form message-error">Ошибка</div>
+                                <div class="message-form message-lock">Фирма занята</div>
+                                <!-- <div class="message-contragent" style="display: none;">
+                                    <span>Контрагент занят</span>
+                                    <div>
+                                        <a href="#" class="btn-blue">Продолжить</a>
+                                        <a href="#" class="btn-white">Отменить</a>
+                                    </div>
+                                </div> -->
+                            </div>
+
 
                         </div>
                     </form>
@@ -192,8 +240,8 @@
         </div>
 
         <footer class="footer">
-    <div class="container"></div>
-</footer>
+            <div class="container"></div>
+        </footer>
 
         <div class="popup-wrap" id="popup-wrap-okay">
             <div class="popup">
@@ -229,7 +277,7 @@
     </div>
 
     <script src="js/vendor.min.js"></script>
-<script src="js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
